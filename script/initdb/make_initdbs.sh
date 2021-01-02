@@ -7,13 +7,16 @@ for d in ./original/Chapter*/ ;
 
     # copy from the original and paste to the sql file
     FILES=$d/*.sql
+
     for FILE in $FILES
       do
+        # get the basename of the filepath
         fn=$(basename $FILE)
         # get the chapter number
         ch=${fn:0:1}
         sc=${fn:2:1}
 
+        # create new filepath
         nf="./ch0${ch}_0${sc}.sql"
         if [ ! -f "$nf" ]; then
           touch $nf
