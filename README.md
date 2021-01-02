@@ -10,7 +10,7 @@ repo based on book "ビッグデータ分析・活用のためのSQLレシピ" h
     ├── pg_data
     └── script
         ├── initdb
-        └── query
+        └── ch03
 
 ## Installation
 
