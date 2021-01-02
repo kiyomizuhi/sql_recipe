@@ -1,5 +1,5 @@
 # sql_recipe
-repo based on book "ビッグデータ分析・活用のためのSQLレシピ" https://book.mynavi.jp/ec/products/detail/id=65863
+repo based on book "ビッグデータ分析・活用のためのSQLレシピ"
 
 Here, we employ postgres on docker.
 
