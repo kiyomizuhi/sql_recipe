@@ -2,28 +2,15 @@
 repo based on book "ビッグデータ分析・活用のためのSQLレシピ" https://book.mynavi.jp/ec/products/detail/id=65863
 
 ## Directories
-.
-├── README.md
-├── Dockerfile
-├── docker-compose.yml
-├── pg_data
-└── script
-    ├── initdb
-    │   ├── ch03.sql
-    │   ├── ch04.sql
-    │   ├── ch05.sql
-    │   ├── ch06.sql
-    │   ├── ch07.sql
-    │   ├── ch08.sql
-    │   ├── create_db.sh
-    │   └── make_initdbs.sh
-    └── query
-        ├── ch03
-        ├── ch04
-        ├── ch05
-        ├── ch06
-        ├── ch07
-        └── ch08
+
+    .
+    ├── README.md
+    ├── Dockerfile
+    ├── docker-compose.yml
+    ├── pg_data
+    └── script
+        ├── initdb
+        └── query
 
 ## Installation
 
