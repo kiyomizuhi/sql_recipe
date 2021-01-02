@@ -5,20 +5,24 @@ for d in ./original/Chapter*/ ;
     # current chapter
     echo $d
 
-    # get the chapter number
-    n=${d:18:1}
-
-    # make sql file for each chapter
-    fp="./ch0$n.sql"
-    touch $fp
-
     # copy from the original and paste to the sql file
     FILES=$d/*.sql
-    for f in $FILES
+    for FILE in $FILES
       do
-        echo "processing: $f"
-        cat $f >> $fp
-        echo "" >> $fp
-        echo "" >> $fp
+        fn=$(basename $FILE)
+        # get the chapter number
+        ch=${fn:0:1}
+        sc=${fn:2:1}
+
+        nf="./ch0${ch}_0${sc}.sql"
+        if [ ! -f "$nf" ]; then
+          touch $nf
+        fi
+
+        # make sql file for each chapter&section
+        echo "processing: $FILE"
+        cat $FILE >> $nf
+        echo "" >> $nf
+        echo "" >> $nf
       done
   done
