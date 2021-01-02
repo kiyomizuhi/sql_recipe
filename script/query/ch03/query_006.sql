@@ -1,0 +1,4 @@
+SELECT
+    CURRENT_TIME as dt
+  , CURRENT_TIMESTAMP as stamp
+;

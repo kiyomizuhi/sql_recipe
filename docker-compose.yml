@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  db:
+    container_name: recipe_db
+    env_file: ./.env
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      TZ: ${TZ}
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+      - ./script:/home/script
