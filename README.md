@@ -34,7 +34,7 @@ bash create_db.sh
 
 ## Usage
 
-- To execute a SQL file 'home/script/query/ch03/query_03_01_00.sql'
+- To execute an SQL file 'home/script/query/ch03/query_03_01_00.sql'
 
 ```bash
 psql -U postgres -d ch03 -f home/script/query/ch03/query_03_01_00.sql
