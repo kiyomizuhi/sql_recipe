@@ -1,12 +1,12 @@
-DROP TABLE IF EXISTS purchase_log;
-CREATE TABLE purchase_log(
+DROP TABLE IF EXISTS purchase_log01;
+CREATE TABLE purchase_log01(
     dt              varchar(255)
   , order_id        integer
   , user_id         varchar(255)
   , purchase_amount integer
 );
 
-INSERT INTO purchase_log
+INSERT INTO purchase_log01
 VALUES
     ('2014-01-01',  1, 'rhwpvvitou', 13900)
   , ('2014-01-01',  2, 'hqnwoamzic', 10616)
@@ -37,15 +37,15 @@ VALUES
 ;
 
 
-DROP TABLE IF EXISTS purchase_log;
-CREATE TABLE purchase_log(
+DROP TABLE IF EXISTS purchase_log02;
+CREATE TABLE purchase_log02(
     dt              varchar(255)
   , order_id        integer
   , user_id         varchar(255)
   , purchase_amount integer
 );
 
-INSERT INTO purchase_log
+INSERT INTO purchase_log02
 VALUES
     ('2014-01-01',  1, 'rhwpvvitou', 13900)
   , ('2014-01-01',  2, 'hqnwoamzic', 10616)
@@ -76,15 +76,15 @@ VALUES
 ;
 
 
-DROP TABLE IF EXISTS purchase_log;
-CREATE TABLE purchase_log(
+DROP TABLE IF EXISTS purchase_log03;
+CREATE TABLE purchase_log03(
     dt              varchar(255)
   , order_id        integer
   , user_id         varchar(255)
   , purchase_amount integer
 );
 
-INSERT INTO purchase_log
+INSERT INTO purchase_log03
 VALUES
     ('2014-01-01',  1, 'rhwpvvitou', 13900)
   , ('2014-01-01',  2, 'hqnwoamzic', 10616)
@@ -115,15 +115,15 @@ VALUES
 ;
 
 
-DROP TABLE IF EXISTS purchase_log;
-CREATE TABLE purchase_log(
+DROP TABLE IF EXISTS purchase_log04;
+CREATE TABLE purchase_log04(
     dt              varchar(255)
   , order_id        integer
   , user_id         varchar(255)
   , purchase_amount integer
 );
 
-INSERT INTO purchase_log
+INSERT INTO purchase_log04
 VALUES
     ('2014-01-01',    1, 'rhwpvvitou', 13900)
   , ('2014-02-08',   95, 'chtanrqtzj', 28469)
@@ -152,15 +152,15 @@ VALUES
 ;
 
 
-DROP TABLE IF EXISTS purchase_log;
-CREATE TABLE purchase_log(
+DROP TABLE IF EXISTS purchase_log05;
+CREATE TABLE purchase_log05(
     dt              varchar(255)
   , order_id        integer
   , user_id         varchar(255)
   , purchase_amount integer
 );
 
-INSERT INTO purchase_log
+INSERT INTO purchase_log05
 VALUES
     ('2014-01-01',    1, 'rhwpvvitou', 13900)
   , ('2014-02-08',   95, 'chtanrqtzj', 28469)
@@ -189,15 +189,15 @@ VALUES
 ;
 
 
-DROP TABLE IF EXISTS purchase_log;
-CREATE TABLE purchase_log(
+DROP TABLE IF EXISTS purchase_log06;
+CREATE TABLE purchase_log06(
     dt              varchar(255)
   , order_id        integer
   , user_id         varchar(255)
   , purchase_amount integer
 );
 
-INSERT INTO purchase_log
+INSERT INTO purchase_log06
 VALUES
     ('2014-01-01',    1, 'rhwpvvitou', 13900)
   , ('2014-02-08',   95, 'chtanrqtzj', 28469)
