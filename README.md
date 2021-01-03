@@ -16,7 +16,8 @@ Here, we employ postgres on docker.
         ├── ch03_02
         ├── ch03_03
         ├── ch03_04
-        └── ch04_01
+        ├── ch04_01
+        └── ch04_02
 
 ## Installation
 
