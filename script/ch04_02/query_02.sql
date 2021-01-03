@@ -15,7 +15,9 @@ SELECT
   , category_amount
   , 100 * category_amount / SUM(category_amount) OVER() AS ratio
   , 100 * SUM(category_amount)
-        OVER(ORDER BY category_amount DESC)
+        OVER(ORDER BY category_amount DESC
+            ROWS BETWEEN UNBOUNDED PRECEDING
+            AND CURRENT ROW)
         / SUM(category_amount) OVER() AS cum_ratio
 
 FROM
