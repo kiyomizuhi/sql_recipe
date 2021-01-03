@@ -1,25 +1,27 @@
-WITH daily_category_amount_december AS (
+WITH monthly_sales AS (
     SELECT
-        dt
-      , category
+        category
       , SUM(price) AS category_amount
     FROM
         purchase_detail_log
     WHERE
         dt BETWEEN '2015-12-01' AND '2015-12-31'
     GROUP BY
-        dt, category
+        category
 )
 
 SELECT
     category
-  , dt
   , category_amount
-  , FIRST_VALUE(category_amount) OVER(PARTITION BY category ORDER BY dt) AS base_amount
-  , 100 * category_amount
-        / FIRST_VALUE(category_amount) OVER(PARTITION BY category ORDER BY dt) AS ratio
+  , 100 * category_amount / SUM(category_amount) OVER() AS ratio
+  , 100 * SUM(category_amount)
+        OVER(ORDER BY category_amount DESC
+            ROWS BETWEEN UNBOUNDED PRECEDING
+            AND CURRENT ROW)
+        / SUM(category_amount) OVER() AS cum_ratio
+
 FROM
-    daily_category_amount_december
+    monthly_sales
 ORDER BY
-    category, dt
+    category_amount DESC
 ;
